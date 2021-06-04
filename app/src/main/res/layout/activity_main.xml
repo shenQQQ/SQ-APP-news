@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--默认是ConstraintLayout代表这是约束性布局，可以通过拖动控件来自动生成代码-->
+<!--修改为RelativeLayout 代表相对布局，通过手写代码来生成对应布局-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/splash"
+    tools:context=".MainActivity">
+
+    <!--布局内部嵌套一个相对布局，宽度匹配父类布局，高度包裹内容-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="44dp"
+        android:paddingRight="44dp"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="90dp">
+
+        <!--字符串由字符串文件注入，形状包括背景由对应的drawable文件注入-->
+        <Button
+            android:layout_alignParentLeft="true"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="@string/login"
+            android:textSize="20sp"
+            android:textColor="#ffffff"
+            android:background="@drawable/shape_login_btn"
+        />
+        <Button
+            android:layout_alignParentRight="true"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="@string/register"
+            android:textSize="20sp"
+            android:textColor="#ffffff"
+            android:background="@drawable/shape_register_btn"
+
+            />
+    </RelativeLayout>
+
+</RelativeLayout>
